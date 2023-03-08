@@ -1,13 +1,77 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Serif+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@200;300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-publicSans;
+    font-size: 15px;
+    line-height: 28px;
+    background-color: #edf3f8;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  section {
+    width: 87.2%;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  *,
+  ::after,
+  ::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  h1 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.18px;
+    font-weight: 400;
+  }
+
+  @media screen and(min-width:768px) {
+    h1 {
+      font-size: 48px;
+      line-height: 56px;
+    }
+    h2 {
+      font-size: 32px;
+      line-height: 40px;
+      letter-spacing: -0.25px;
+    }
+    section {
+      width: 89.58px;
+    }
+  }
+  @media screen and(min-width:1024) {
+   
+    section {
+      width: 66%;
+    }
+  }
+  @media screen and(min-width:1444px) {
+    h1 {
+      font-size: 72px;
+      line-height: 72px;
+    }
+    section {
+      width: 77.08%;
+    }
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  /* .list-style-image {
+  list-style-image: url('./assets/shared/desktop/icon-check.svg');
+} */
 }

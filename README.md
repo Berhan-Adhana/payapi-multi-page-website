@@ -1,5 +1,6 @@
 # Getting Started with Create React App
 
+<!-- npx tailwindcss -i ./src/index.css -o ./src/css/styles.css --watch  -->
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
