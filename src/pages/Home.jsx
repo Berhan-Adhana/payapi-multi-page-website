@@ -4,6 +4,7 @@ import { companies, services } from "../constants";
 import CTA from "../components/CTA";
 import EasyToImplement from "../assets/home/desktop/illustration-easy-to-implement.svg";
 import SimpleUI from "../assets/home/desktop/illustration-simple-ui.svg";
+import { NavLink } from "react-router-dom";
 const Home = () => {
   return (
     <main>
@@ -24,16 +25,16 @@ const Home = () => {
             <br className="block md:hidden" /> free.
           </h1>
           <div className="flex flex-col lg:justify-start lg:items-start ">
-            <div className="md:bg-white pl-4 py-1 flex flex-col md:flex-row gap-y-4 justify-center md:items-center rounded-[24px] ">
+            <div className="md:bg-white pl-4 flex flex-col md:flex-row gap-y-4 justify-center md:items-center md:justify-between rounded-[24px] ">
               <input
                 type="text"
                 placeholder="Enter email address"
-                className="bg-white md:bg-transparent md:w-full md:h-full border-none outline-none px-4 py-2 rounded-[24px] placeholder:text-secondary placeholder:opacity-[.5] placeholder:mix-blend-normal"
+                className="bg-white md:bg-transparent  md:h-full border-none outline-none px-4 py-2 rounded-[24px] placeholder:text-secondary placeholder:opacity-[.5] placeholder:mix-blend-normal"
               />
-              <btn btn btn-primary>Schedule a Demo</btn>
+              <button className="btn btn-primary">Schedule a Demo</button>
             </div>
             <p className="text-center font-[400] text-lightBlue ">
-              Have any questions? <span className="font-bold ">Contact Us</span>
+              Have any questions? <NavLink to='/contact' className="font-bold cursor-pointer ">Contact Us</NavLink>
             </p>
           </div>
         </div>
@@ -64,7 +65,7 @@ const Home = () => {
             developers with the tools they need to create easy and accessible
             experiences for their users.{" "}
           </p>
-          <button btn btn-secondary>About Us</button>
+          <button className="btn btn-secondary">About Us</button>
         </div>
       </div>
       {/* Easy to implement */}

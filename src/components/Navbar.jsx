@@ -34,7 +34,7 @@ const Navbar = () => {
         <Logo />
         <ul className="flex  lg:gap-x-10   ml-4 z-[100]">
           {menuLinks.map((menu, index) => (
-            <li className="mr-10">
+            <li className="mr-10" key={index}>
               <NavLink
                 to={menu.link}
                 style={({ isActive }) =>
@@ -49,9 +49,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <button btn btn-primary>
-          Schedule a Demo
-        </button>
+        <button className="btn btn-primary">Schedule a Demo</button>
       </nav>
       {/* Mobile */}
       <nav
@@ -66,7 +64,7 @@ const Navbar = () => {
           } `}
         >
           {menuLinks.map((menu, index) => (
-            <li>
+            <li key={index}>
               <NavLink
                 to={menu.link}
                 style={({ isActive }) =>
@@ -80,9 +78,7 @@ const Navbar = () => {
               </NavLink>
             </li>
           ))}
-          <button btn btn-primary>
-            Schedule a Demo
-          </button>
+          <button className="btn btn-primary">Schedule a Demo</button>
           <img
             src={Close}
             onClick={() => {

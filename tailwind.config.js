@@ -16,7 +16,7 @@ module.exports = {
         dmSerif: ["DM Serif Display", "serif"],
       },
       boxShadow: {
-        buttonShadow: "10px 10px 25px -10px rgba(54, 83, 107, 0.25)",
+        buttonShadow: "10px 10px 25px -10px rgba(54, 83, 107, 0.25)/30",
       },
       content: {
         // checker: "url('../assets/shared/desktop/icon-check.svg')",

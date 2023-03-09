@@ -30,6 +30,7 @@ const Pricing = () => (
               <li className="flex flex-col justify-center items-center flex-1 w-full">
                 {plan.features.map((feature, index) => (
                   <span
+                  key={index}
                     role="listitem"
                     className="flex justify-start text-center items-center min-w-[150px] gap-x-4"
                   >
@@ -52,9 +53,7 @@ const Pricing = () => (
               </li>
               <Line />
               {/* <div className="h-[1px] bg-secondary w-full flex-none" /> */}
-              <button btn btn-normal>
-                {plan.btn}
-              </button>
+              <button className="btn btn-normal">{plan.btn}</button>
             </ul>
           </article>
         ))}

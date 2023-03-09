@@ -16,7 +16,7 @@ const Footer = () => {
         <Logo />
         <ul className="flex flex-col lg:flex-row lg:gap-x-10 gap-y-[31px]  ml-4 z-[100]">
           {menuLinks.map((menu, index) => (
-            <li>
+            <li key={index}>
               <NavLink
                 to={menu.link}
                 style={({ isActive }) =>
@@ -31,19 +31,38 @@ const Footer = () => {
             </li>
           ))}
         </ul>
+        {/* social links */}
         <div className="flex gap-x-6 z-[100]">
-          <AiFillFacebook
-            className="cursor-pointer hover:text-accent"
-            size={24}
-          />
-          <AiOutlineTwitter
-            className="cursor-pointer hover:text-accent"
-            size={24}
-          />
-          <AiOutlineLinkedin
-            className="cursor-pointer hover:text-accent"
-            size={24}
-          />
+          <NavLink
+            to="https://www.facebook.com/"
+            target="_blank"
+            className="cursor-pointer"
+          >
+            <AiFillFacebook
+              className="cursor-pointer hover:text-accent"
+              size={24}
+            />
+          </NavLink>
+          <NavLink
+            to="https://www.twitter.com/"
+            target="_blank"
+            className="cursor-pointer"
+          >
+            <AiOutlineTwitter
+              className="cursor-pointer hover:text-accent"
+              size={24}
+            />
+          </NavLink>
+          <NavLink
+            to="https://www.linkedin.com/"
+            target="_blank"
+            className="cursor-pointer"
+          >
+            <AiOutlineLinkedin
+              className="cursor-pointer hover:text-accent"
+              size={24}
+            />
+          </NavLink>
         </div>
         <img
           src={BgPattern}
