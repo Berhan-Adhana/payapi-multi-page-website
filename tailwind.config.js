@@ -10,6 +10,7 @@ module.exports = {
         white: "#FBFCFE",
         mirageBlue: "#1B262F",
         lightBlue: "#6C8294",
+        error: "#FF0000",
       },
       fontFamily: {
         publicSans: ["Public Sans", "sans-serif"],
