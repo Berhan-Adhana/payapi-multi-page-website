@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../components/Button";
 import { companies } from "../constants";
 
 const Contact = () => {

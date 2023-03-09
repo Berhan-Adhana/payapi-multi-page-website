@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../components/Button";
 import PhoneMockup from "../assets/home/desktop/illustration-phone-mockup.svg";
 import { companies, services } from "../constants";
 import CTA from "../components/CTA";
@@ -31,7 +30,7 @@ const Home = () => {
                 placeholder="Enter email address"
                 className="bg-white md:bg-transparent md:w-full md:h-full border-none outline-none px-4 py-2 rounded-[24px] placeholder:text-secondary placeholder:opacity-[.5] placeholder:mix-blend-normal"
               />
-              <Button primary>Schedule a Demo</Button>
+              <btn btn btn-primary>Schedule a Demo</btn>
             </div>
             <p className="text-center font-[400] text-lightBlue ">
               Have any questions? <span className="font-bold ">Contact Us</span>
@@ -65,7 +64,7 @@ const Home = () => {
             developers with the tools they need to create easy and accessible
             experiences for their users.{" "}
           </p>
-          <Button secondary>About Us</Button>
+          <button btn btn-secondary>About Us</button>
         </div>
       </div>
       {/* Easy to implement */}

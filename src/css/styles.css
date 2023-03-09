@@ -483,6 +483,18 @@ h2 {
   opacity: 0.5;
 }
 
+.btn-primary{
+  --tw-bg-opacity: 1;
+  background-color: rgb(186 66 112 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(251 252 254 / var(--tw-text-opacity));
+}
+
+.btn-primary:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(218 109 151 / var(--tw-bg-opacity));
+}
+
 .btn-normal{
   border-width: 1px;
   border-style: solid;
@@ -498,6 +510,24 @@ h2 {
   background-color: rgb(54 83 107 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(251 252 254 / var(--tw-text-opacity));
+}
+
+.btn-secondary{
+  border-width: 1px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(251 252 254 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(27 38 47 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(251 252 254 / var(--tw-text-opacity));
+}
+
+.btn-secondary:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 252 254 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(27 38 47 / var(--tw-text-opacity));
 }
 
 @media screen and (min-width: 768px) {

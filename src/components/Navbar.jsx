@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { menuLinks } from "../constants";
 import Menu from "../assets/shared/mobile/menu.svg";
 import Close from "../assets/shared/mobile/close.svg";
-import Button from "./Button";
 import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
 
@@ -50,7 +49,9 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <Button primary>Schedule a Demo</Button>
+        <button btn btn-primary>
+          Schedule a Demo
+        </button>
       </nav>
       {/* Mobile */}
       <nav
@@ -79,8 +80,9 @@ const Navbar = () => {
               </NavLink>
             </li>
           ))}
-          <Button primary>Schedule a Demo</Button>
-
+          <button btn btn-primary>
+            Schedule a Demo
+          </button>
           <img
             src={Close}
             onClick={() => {

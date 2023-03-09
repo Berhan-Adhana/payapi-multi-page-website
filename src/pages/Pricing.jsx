@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../components/Button";
 import { plans } from "../constants";
 import IconCheck from "../assets/shared/desktop/icon-check.svg";
 import Line from "../components/Line";
@@ -19,7 +18,9 @@ const Pricing = () => (
             <h2 className="text-primary font-dmSerif font-[400] ">
               {plan.planType}
             </h2>
-            <p className="text-center lg:text-left font-[400] text-lightBlue">{plan.desc}</p>
+            <p className="text-center lg:text-left font-[400] text-lightBlue">
+              {plan.desc}
+            </p>
             <p className="text-[56px] leading-[72px] -tracking-[.43px] font-dmSerif md:text-[48px] md:-tracking-[.37px] xl:text-[56px] xl:-tracking-[.43px] text-secondary">
               {plan.price}
             </p>
@@ -51,7 +52,9 @@ const Pricing = () => (
               </li>
               <Line />
               {/* <div className="h-[1px] bg-secondary w-full flex-none" /> */}
-              <Button normal>{plan.btn}</Button>
+              <button btn btn-normal>
+                {plan.btn}
+              </button>
             </ul>
           </article>
         ))}

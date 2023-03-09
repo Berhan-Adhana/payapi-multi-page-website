@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "./Button";
 
 const CTA = () => {
   return (
@@ -14,7 +13,7 @@ const CTA = () => {
           placeholder="Enter email address"
           className="bg-white md:bg-transparent text-secondary -tracking-[0.115385px] md:h-full border-none outline-none px-4 py-2 rounded-[24px] placeholder:text-secondary placeholder:opacity-[.5] placeholder:mix-blend-normal"
         />
-        <Button primary>Schedule a Demo</Button>
+        <button className="btn btn-primary">Schedule a Demo</button>
       </div>
     </section>
   );
