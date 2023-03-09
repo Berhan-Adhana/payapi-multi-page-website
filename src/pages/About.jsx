@@ -42,12 +42,12 @@ const About = () => {
         <picture className="max-w-full w-full">
           <source
             media="(min-width: 768px)"
-            srcset={ImageTablet}
+            srcSet={ImageTablet}
             className="w-full object-cover p-0 m-0"
           />
           <source
             media="(min-width: 1024px)"
-            srcset={ImageDesktop}
+            srcSet={ImageDesktop}
             className="w-full object-cover p-0 m-0"
           />
           <img

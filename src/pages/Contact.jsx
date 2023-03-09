@@ -53,7 +53,7 @@ const Contact = () => {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-[44px]">
             {companies.map((company, index) => (
-              <img src={company.logo} alt={company.name} />
+              <img key={index} src={company.logo} alt={company.name} />
             ))}
           </div>
         </div>

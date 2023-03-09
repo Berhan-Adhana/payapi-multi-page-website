@@ -101,7 +101,7 @@ const Home = () => {
       </section>
       <section className=" grid grid-cols-1 md:grid-cols-3 gap-y-12 md:gap-x-[10px] lg:gap-x-[30px] lg:px-[100px]">
         {services.map((service, index) => (
-          <article className="flex flex-col items-center justify-center text-center">
+          <article key={index} className="flex flex-col items-center justify-center text-center">
             <img src={service.icon} alt={service.title} className="mb-8" />
             <p className="font-bold leading-[25px] space-x-[-.138px] text-secondary">
               {service.title}
