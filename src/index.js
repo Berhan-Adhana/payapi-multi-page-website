@@ -15,7 +15,7 @@ const Dashboard = () => (
   <>
     <Navbar />
     <Outlet />
-    <CTA/>
+    <CTA />
     <Footer />
   </>
 );
@@ -47,8 +47,6 @@ const router = createBrowserRouter([
 
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}>
-      <App />
-    </RouterProvider>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );

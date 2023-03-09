@@ -19,7 +19,6 @@
     width: 87.2%;
     margin-left: auto;
     margin-right: auto;
-    
   }
   *,
   ::after,
@@ -39,7 +38,22 @@
     font-weight: 400;
   }
 
-  @media screen and(min-width:768px) {
+  .btn {
+    @apply disabled:opacity-[0.5]  py-4 px-4 font-[700]  leading-[17.63px]  space-x-[-0.115385px] shadow-buttonShadow rounded-[24px] transition-colors duration-150;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-accent;
+  }
+  .btn-normal {
+    @apply bg-transparent text-secondary hover:bg-secondary hover:text-white border-solid border-secondary border-[1px];
+  }
+
+  .btn-secondary {
+    @apply bg-mirageBlue text-white border-solid border-[1px] border-white hover:bg-white hover:text-mirageBlue;
+  }
+
+  @media screen and (min-width: 768px) {
     h1 {
       font-size: 48px;
       line-height: 56px;
@@ -49,23 +63,25 @@
       line-height: 40px;
       letter-spacing: -0.25px;
     }
-    section {
-      width: 89.58px;
+    section,
+    nav {
+      width: 89%;
     }
   }
-  @media screen and(min-width:1024) {
-   
-    section {
+  @media screen and (min-width: 1024) {
+    section,
+    nav {
       width: 66%;
     }
   }
-  @media screen and(min-width:1444px) {
+  @media screen and (min-width: 1444px) {
     h1 {
       font-size: 72px;
       line-height: 72px;
     }
-    section {
-      width: 77.08%;
+    section,
+    nav {
+      width: 77%;
     }
   }
 }

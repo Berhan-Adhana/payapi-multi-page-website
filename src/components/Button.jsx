@@ -1,6 +1,6 @@
 import React from "react";
 
-const Button = ({ primary, secondary, normal,children, disabled=false }) => {
+const Button = ({ primary, secondary, normal, children, disabled = false }) => {
   let dynamicClassName = "";
   if (primary) dynamicClassName = "bg-primary text-white hover:bg-accent";
   if (secondary)
@@ -12,7 +12,7 @@ const Button = ({ primary, secondary, normal,children, disabled=false }) => {
   return (
     <button
       disabled={disabled}
-      className={`${dynamicClassName} disabled:opacity-[0.5]  py-2 px-4 font-[700]  leading-[17.63px] space-x-[-0.115385px] shadow-buttonShadow rounded-[24px] transition-colors duration-150`}
+      className={`${dynamicClassName} disabled:opacity-[0.5]  py-4 px-4 font-[700]  leading-[17.63px]  space-x-[-0.115385px] shadow-buttonShadow rounded-[24px] transition-colors duration-150`}
     >
       {children}
     </button>

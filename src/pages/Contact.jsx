@@ -8,7 +8,7 @@ const Contact = () => {
       type={type}
       placeholder={placeholder}
       aria-labelledby={placeholder}
-      className="w-full border-solid border-b-[1px] border-b-secondary bg-transparent pl-2  placeholder:font-[400] placeholder:-tracking-[0.12px] placeholder:text-secondary placeholder:opacity-[0.5] placeholder:mix-blend-normal py-1 outline-none"
+      className="w-full border-solid border-b-[1px] border-b-secondary bg-transparent pl-2 text-secondary -tracking-[0.115385px]  placeholder:font-[400] placeholder:-tracking-[0.12px] placeholder:text-secondary placeholder:opacity-[0.5] placeholder:mix-blend-normal py-1 outline-none"
     />
   );
 
@@ -27,7 +27,6 @@ const Contact = () => {
           <Input type="text" placeholder="Title" />
           <textarea
             name="message"
-          
             id="message"
             cols="10"
             rows="3"
@@ -36,11 +35,14 @@ const Contact = () => {
           />
           <span className="flex gap-x-4 items-center justify-center">
             <input className="" type="checkbox" id="update" />
-            <label htmlFor="update">
+            <label
+              htmlFor="update"
+              className="text-secondary font-[400] leading-[25px] -tracking-[0.115385px]"
+            >
               Stay up-to-date with company announcements and updates to our API
             </label>
           </span>
-          <Button normal>Submit</Button>
+          <button className="btn btn-normal w-[40%] lg:w-[60%]">Submit</button>
         </form>
         {/* companies */}
         <div className="flex flex-col gap-y-8 mt-[80px] items-center">

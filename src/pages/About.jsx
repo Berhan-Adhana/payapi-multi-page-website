@@ -5,8 +5,8 @@ import ImageMobile from "../assets/about/mobile/image-team-members.jpg";
 import { stats } from "../constants";
 const About = () => {
   const AboutComponent = ({ header, description }) => (
-    <div className="flex flex-col md:flex-row gap-y-4 md:gap-x-[10px] items-center md:items-start lg:gap-x-[30px]">
-      <h2 className="text-secondary whitespace-nowrap min-w-[150px]">
+    <div className="flex flex-col md:flex-row gap-y-4 md:gap-x-[10px] items-center   lg:gap-x-[30px]">
+      <h2 className="text-secondary whitespace-nowrap min-w-[180px] font-[400] font-dmSerif text-center md:text-left !leading-10">
         {header}
       </h2>
       <p className="text-lightBlue text-center  md:text-left">{description}</p>
@@ -16,7 +16,7 @@ const About = () => {
     <main>
       {/* // Landing page */}
       <section className="mt-12  md:mt-[75px]   xl:mt-[82px]   lg:mt-[52px]  flex flex-col gap-y-10 md:gap-y-[54px]">
-        <h1 className="text-secondary space-x-[-0.25px] md:space-x-[-0.37px] lg:space-x-[-0.43px] text-center  lg:text-left  ">
+        <h1 className="text-secondary space-x-[-0.25px] md:space-x-[-0.37px] lg:space-x-[-0.43px] text-center  lg:text-left font-dmSerif font-bold ">
           We empower
           <br className="block md:hidden" /> innovators
           <br /> by delivering access to

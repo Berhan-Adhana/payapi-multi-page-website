@@ -457,7 +457,50 @@ h2 {
   font-weight: 400;
 }
 
-@media screen and(min-width:768px) {
+.btn > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(-0.115385px * var(--tw-space-x-reverse));
+  margin-left: calc(-0.115385px * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.btn{
+  border-radius: 24px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-weight: 700;
+  line-height: 17.63px;
+  --tw-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+  --tw-shadow-colored: 10px 10px 25px -10px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.btn:disabled{
+  opacity: 0.5;
+}
+
+.btn-normal{
+  border-width: 1px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(54 83 107 / var(--tw-border-opacity));
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: rgb(54 83 107 / var(--tw-text-opacity));
+}
+
+.btn-normal:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(54 83 107 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(251 252 254 / var(--tw-text-opacity));
+}
+
+@media screen and (min-width: 768px) {
   h1 {
     font-size: 48px;
     line-height: 56px;
@@ -469,25 +512,28 @@ h2 {
     letter-spacing: -0.25px;
   }
 
-  section {
-    width: 89.58px;
+  section,
+    nav {
+    width: 89%;
   }
 }
 
-@media screen and(min-width:1024) {
-  section {
+@media screen and (min-width: 1024) {
+  section,
+    nav {
     width: 66%;
   }
 }
 
-@media screen and(min-width:1444px) {
+@media screen and (min-width: 1444px) {
   h1 {
     font-size: 72px;
     line-height: 72px;
   }
 
-  section {
-    width: 77.08%;
+  section,
+    nav {
+    width: 77%;
   }
 }
 
@@ -696,11 +742,6 @@ h2 {
   margin: 0px;
 }
 
-.mx-6{
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
-
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -771,16 +812,16 @@ h2 {
   min-height: 100vh;
 }
 
+.w-\[40\%\]{
+  width: 40%;
+}
+
 .w-\[75\%\]{
   width: 75%;
 }
 
 .w-\[87\.2\%\]{
   width: 87.2%;
-}
-
-.w-\[89\.58\%\]{
-  width: 89.58%;
 }
 
 .w-full{
@@ -795,8 +836,20 @@ h2 {
   min-width: 150px;
 }
 
+.min-w-\[180px\]{
+  min-width: 180px;
+}
+
 .max-w-full{
   max-width: 100%;
+}
+
+.flex-1{
+  flex: 1 1 0%;
+}
+
+.flex-none{
+  flex: none;
 }
 
 .cursor-pointer{
@@ -1052,11 +1105,6 @@ h2 {
   padding-bottom: 31px;
 }
 
-.py-\[\]{
-  padding-top: ;
-  padding-bottom: ;
-}
-
 .py-\[80px\]{
   padding-top: 80px;
   padding-bottom: 80px;
@@ -1068,14 +1116,6 @@ h2 {
 
 .pl-4{
   padding-left: 1rem;
-}
-
-.pl-6{
-  padding-left: 1.5rem;
-}
-
-.pr-\[23px\]{
-  padding-right: 23px;
 }
 
 .pt-12{
@@ -1118,6 +1158,10 @@ h2 {
   font-weight: 700;
 }
 
+.\!leading-10{
+  line-height: 2.5rem !important;
+}
+
 .leading-7{
   line-height: 1.75rem;
 }
@@ -1150,8 +1194,16 @@ h2 {
   letter-spacing: -.43px;
 }
 
+.-tracking-\[0\.115385px\]{
+  letter-spacing: -0.115385px;
+}
+
 .-tracking-\[0\.25px\]{
   letter-spacing: -0.25px;
+}
+
+.-tracking-\[-0\.115385px\]{
+  letter-spacing: 0.115385px;
 }
 
 .text-lightBlue{
@@ -1306,11 +1358,6 @@ h2 {
 }
 
 @media (min-width: 768px){
-  .md\:mx-10{
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
-  }
-
   .md\:my-\[100px\]{
     margin-top: 100px;
     margin-bottom: 100px;
@@ -1368,10 +1415,6 @@ h2 {
     flex-direction: row;
   }
 
-  .md\:items-start{
-    align-items: flex-start;
-  }
-
   .md\:items-center{
     align-items: center;
   }
@@ -1410,31 +1453,9 @@ h2 {
     background-color: rgb(251 252 254 / var(--tw-bg-opacity));
   }
 
-  .md\:px-\[40px\]{
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
-  .md\:px-\[98px\]{
-    padding-left: 98px;
-    padding-right: 98px;
-  }
-
   .md\:px-\[80px\]{
     padding-left: 80px;
     padding-right: 80px;
-  }
-
-  .md\:pl-\[97px\]{
-    padding-left: 97px;
-  }
-
-  .md\:pr-\[98px\]{
-    padding-right: 98px;
-  }
-
-  .md\:pt-\[75px\]{
-    padding-top: 75px;
   }
 
   .md\:text-left{
@@ -1455,11 +1476,6 @@ h2 {
     top: -177px;
   }
 
-  .lg\:mx-\[100px\]{
-    margin-left: 100px;
-    margin-right: 100px;
-  }
-
   .lg\:my-\[100px\]{
     margin-top: 100px;
     margin-bottom: 100px;
@@ -1477,6 +1493,10 @@ h2 {
     margin-top: 43px;
   }
 
+  .lg\:mt-\[52px\]{
+    margin-top: 52px;
+  }
+
   .lg\:mt-\[72px\]{
     margin-top: 72px;
   }
@@ -1489,12 +1509,12 @@ h2 {
     margin-top: 88px;
   }
 
-  .lg\:mt-\[52px\]{
-    margin-top: 52px;
-  }
-
   .lg\:block{
     display: block;
+  }
+
+  .lg\:w-\[60\%\]{
+    width: 60%;
   }
 
   .lg\:w-\[66\%\]{
@@ -1530,11 +1550,6 @@ h2 {
             column-gap: 2.5rem;
   }
 
-  .lg\:gap-x-\[100px\]{
-    -webkit-column-gap: 100px;
-            column-gap: 100px;
-  }
-
   .lg\:gap-x-\[30px\]{
     -webkit-column-gap: 30px;
             column-gap: 30px;
@@ -1543,6 +1558,11 @@ h2 {
   .lg\:gap-x-\[50px\]{
     -webkit-column-gap: 50px;
             column-gap: 50px;
+  }
+
+  .lg\:gap-x-\[80px\]{
+    -webkit-column-gap: 80px;
+            column-gap: 80px;
   }
 
   .lg\:space-x-\[-0\.43px\] > :not([hidden]) ~ :not([hidden]){
@@ -1556,32 +1576,14 @@ h2 {
     padding-right: 100px;
   }
 
-  .lg\:px-\[162px\]{
-    padding-left: 162px;
-    padding-right: 162px;
-  }
-
   .lg\:px-\[165px\]{
     padding-left: 165px;
     padding-right: 165px;
   }
 
-  .lg\:px-\[80px\]{
-    padding-left: 80px;
-    padding-right: 80px;
-  }
-
   .lg\:py-\[38pxS\]{
     padding-top: 38pxS;
     padding-bottom: 38pxS;
-  }
-
-  .lg\:pl-\[130px\]{
-    padding-left: 130px;
-  }
-
-  .lg\:pt-\[52px\]{
-    padding-top: 52px;
   }
 
   .lg\:text-left{
@@ -1590,11 +1592,6 @@ h2 {
 }
 
 @media (min-width: 1280px){
-  .xl\:mx-\[165px\]{
-    margin-left: 165px;
-    margin-right: 165px;
-  }
-
   .xl\:mt-\[100px\]{
     margin-top: 100px;
   }
@@ -1634,19 +1631,6 @@ h2 {
   .xl\:px-\[165px\]{
     padding-left: 165px;
     padding-right: 165px;
-  }
-
-  .xl\:px-\[\]{
-    padding-left: ;
-    padding-right: ;
-  }
-
-  .xl\:pl-\[260px\]{
-    padding-left: 260px;
-  }
-
-  .xl\:pt-\[82px\]{
-    padding-top: 82px;
   }
 
   .xl\:text-\[56px\]{

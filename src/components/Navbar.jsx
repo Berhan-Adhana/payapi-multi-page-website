@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop */}
-      <nav className=" hidden md:flex   items-center justify-between  mt-4  w-[89.58%] lg:w-[66%]  xl:w-[77.08%] mx-auto py-4 relative overflow-hidden ">
+      <nav className=" hidden md:flex items-center justify-between mx-auto    mt-4  py-4 relative overflow-hidden ">
         {/* logo */}
         <Logo />
         <ul className="flex  lg:gap-x-10   ml-4 z-[100]">
